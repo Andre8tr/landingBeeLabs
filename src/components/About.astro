@@ -1,0 +1,59 @@
+---
+import CardProject from "./CardProject.astro";
+import Image from "astro/components/Image.astro";
+---
+
+<h2 class="text-3xl font-bold mb-4 mt-6 text-center" id="about">
+  ¿Quienes somos?
+</h2>
+<div class="flex flex-col md:flex-row items-center gap-6 mx-28 my-12">
+  <!-- Sección de texto -->
+  <div class="flex-1 text-center md:text-left">
+    <h2 class="text-2xl font-bold mb-4">Acerca de nosotros</h2>
+    <p class="text-gray-700 text-justify">
+      Bee Labs es una agencia digital creativa especializada en el desarrollo de
+      aplicaciones, páginas web y tiendas en línea (e-commerce). <br />
+      Combinamos diseño atractivo, tecnología de vanguardia y estrategias personalizadas
+      para crear soluciones digitales que impulsan negocios y optimizan la experiencia
+      de los usuarios. Nuestro equipo transforma ideas en productos funcionales,
+      rápidos y seguros, ayudando a nuestros clientes a destacar en el mundo digital
+      y alcanzar sus objetivos comerciales.
+    </p>
+  </div>
+
+  <!-- Sección de imagen -->
+  <div class="flex-1">
+    {
+      /* 
+ <Image
+      src={InfoImage}
+      alt={"Soluciones web"}
+      height={300}
+      class="roundSoluciones"
+    />
+    */
+    }
+  </div>
+</div>
+
+<div class="flex flex-col md:flex-row items-center gap-6 mx-24 my-18 mt-6">
+  <CardProject
+    name="Leches +"
+    description="Un e-commerce de formulas de leche, con una landing page integrada con información sobre el centro médico en el cual esta úbicado"
+  />
+  <CardProject
+    name="Puppy Paw"
+    description="Puppy Paw es una asociación que se dedica al rescate y a la dignificación de animalitos en situacion de calle y vulnerabilidad"
+  />
+  <CardProject
+    name="Lola Store"
+    description="Es una tienda de joyas en la cual puedes navegar y hacer tus pagos desde la comodidad de tu hogar y todo con alta seguridad para ti   "
+  />
+</div>
+
+<style>
+  .roundSoluciones {
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+</style>
