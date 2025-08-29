@@ -3,8 +3,9 @@ interface Props {
   service?: string;
   price?: string;
   description?: string;
+  urlImg?: string;
 }
-
+import Image from "astro/components/Image.astro";
 const { service, price, description } = Astro.props;
 ---
 
@@ -114,6 +115,10 @@ const { service, price, description } = Astro.props;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+    background-image: url("../../assets//img/ecommerce.png");
+    background-size: contain;
+    background-repeat: repeat;
+    object-fit: cover; /* o "contain" según prefieras */
   }
 
   .card__image::after {

@@ -1,6 +1,8 @@
 ---
 import CardProject from "./CardProject.astro";
-import Image from "astro/components/Image.astro";
+import masLechesImg from "@/assets/img/projectsClients/masleches.png";
+import lolasImg from "@/assets/img/projectsClients/lolas.png";
+import puppyImg from "@/assets/img/projectsClients/puppy.jpeg";
 ---
 
 <h2 class="text-3xl font-bold mb-4 mt-6 text-center" id="about">
@@ -38,16 +40,25 @@ import Image from "astro/components/Image.astro";
 
 <div class="flex flex-col md:flex-row items-center gap-6 mx-24 my-18 mt-6">
   <CardProject
-    name="Leches +"
+    name="+Leches"
     description="Un e-commerce de formulas de leche, con una landing page integrada con información sobre el centro médico en el cual esta úbicado"
+    altImage={"Mas leches"}
+    srcImageName={masLechesImg}
+    siteUrl="https://adeni-test-2.jumpseller.com/"
   />
   <CardProject
     name="Puppy Paw"
     description="Puppy Paw es una asociación que se dedica al rescate y a la dignificación de animalitos en situacion de calle y vulnerabilidad"
+    altImage={"Puppy Paw"}
+    srcImageName={puppyImg}
+    siteUrl="https://puppypaw.netlify.app/"
   />
   <CardProject
     name="Lola Store"
     description="Es una tienda de joyas en la cual puedes navegar y hacer tus pagos desde la comodidad de tu hogar y todo con alta seguridad para ti   "
+    altImage={"Lola's store"}
+    srcImageName={lolasImg}
+    siteUrl="/"
   />
 </div>
 
