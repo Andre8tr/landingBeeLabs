@@ -3,12 +3,13 @@ import CardProject from "./CardProject.astro";
 import masLechesImg from "@/assets/img/projectsClients/masleches.png";
 import lolasImg from "@/assets/img/projectsClients/lolas.png";
 import puppyImg from "@/assets/img/projectsClients/puppy.jpeg";
+import storeCommerce from "@/assets/img/ecommerce.png";
 ---
 
 <h2 class="text-3xl font-bold mb-4 mt-6 text-center" id="about">
   ¿Quienes somos?
 </h2>
-<div class="flex flex-col md:flex-row items-center gap-6 mx-28 my-12">
+<div class="flex flex-col md:flex-row items-center gap-6 mx-12 my-12 md:mx-24">
   <!-- Sección de texto -->
   <div class="flex-1 text-center md:text-left">
     <h2 class="text-2xl font-bold mb-4">Acerca de nosotros</h2>
@@ -38,7 +39,9 @@ import puppyImg from "@/assets/img/projectsClients/puppy.jpeg";
   </div>
 </div>
 
-<div class="flex flex-col md:flex-row items-center gap-6 mx-24 my-18 mt-6">
+<div
+  class="flex flex-col md:flex-row items-center mx-12 gap-6 my-18 mt-6 md:mx-24"
+>
   <CardProject
     name="+Leches"
     description="Un e-commerce de formulas de leche, con una landing page integrada con información sobre el centro médico en el cual esta úbicado"
@@ -57,7 +60,7 @@ import puppyImg from "@/assets/img/projectsClients/puppy.jpeg";
     name="Lola Store"
     description="Es una tienda de joyas en la cual puedes navegar y hacer tus pagos desde la comodidad de tu hogar y todo con alta seguridad para ti   "
     altImage={"Lola's store"}
-    srcImageName={lolasImg}
+    srcImageName={storeCommerce}
     siteUrl="/"
   />
 </div>
