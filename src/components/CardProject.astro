@@ -9,10 +9,14 @@ interface Props {
   siteUrl: string;
 }
 const { name, description, srcImageName, altImage, siteUrl } = Astro.props;
+{
+  /* dark:bg-gray-800 dark:border-gray-700 
+en caso de querer usar dark slass */
+}
 ---
 
 <div
-  class="max-w-sm border justify-center text-white border-gray-200 rounded-2xl shadow-sm dark:bg-gray-800 dark:border-gray-700"
+  class="max-w-sm border justify-center text-white border-gray-200 rounded-2xl shadow-sm"
 >
   <div
     class="flex mx-auto align-baseline justify-center p-3 rounded-b-2xl shadow-purple-900"
@@ -27,12 +31,12 @@ const { name, description, srcImageName, altImage, siteUrl } = Astro.props;
   <div class="p-4">
     <a href="#">
       <h5
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900"
       >
         {name}
       </h5>
     </a>
-    <p class="mb-3 font-normal text-gray-800 dark:text-gray-200 md:min-h-24">
+    <p class="mb-3 font-normal text-gray-800 dark:text-gray-900 md:min-h-24">
       {description}
     </p>
     <a href={siteUrl} target="_blank">

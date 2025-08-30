@@ -1,27 +1,25 @@
 ---
+import Image from "astro/components/Image.astro";
 interface Props {
   service?: string;
   price?: string;
   description?: string;
-  urlImg?: string;
+  urlImg?: any;
 }
-import Image from "astro/components/Image.astro";
-const { service, price, description } = Astro.props;
-import ecomm from "../../assets/img/ecommerce.png";
+const { service, price, description , urlImg} = Astro.props;
+import storeCommerce from "@/assets/img/social.png";
 ---
-
 <div class="card">
   <div class="card__shine"></div>
   <div class="card__glow"></div>
   <div class="card__content">
     <div class="card__badge">Info</div>
     <div style="--bg-color: #a78bfa" class="card__image">
-      <Image
-        src={ecomm}
-        width={100}
-        alt={"ecomm"}
-        class="h-48 w-100 rounded-t-lg"
-      />
+    <Image
+      src={urlImg}
+      alt='test'
+      class="h-50 w-full object-cover rounded-t-lg md:h-40"
+    />
     </div>
     <div class="card__text">
       <p class="card__title">{service}</p>
@@ -52,8 +50,8 @@ import ecomm from "../../assets/img/ecommerce.png";
     --card-text: #ececec;
     --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 
-    width: 240px;
-    height: 280px;
+    width: 285px;
+    height: 330px;
     background: var(--card-bg);
     border-radius: 20px;
     position: relative;
@@ -250,6 +248,17 @@ import ecomm from "../../assets/img/ecommerce.png";
   /* Active State */
   .card:active {
     transform: translateY(-5px) scale(0.98);
+  }
+
+  @media screen and (min-width: 768px ){
+      .card {
+    --card-bg: hsl(238, 23%, 22%);
+    --card-accent: #7c3aed;
+    --card-text: #ececec;
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+
+    width: 240px;
+    height: 280px;
   }
 
   /* Animations */
