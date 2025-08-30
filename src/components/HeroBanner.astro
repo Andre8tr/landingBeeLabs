@@ -1,3 +1,33 @@
 ---
-
+import Image from "astro/components/Image.astro";
+import bannerDesk from "@/assets/img/banners/banner4.png";
+import bannerMobile from "@/assets/img/banners/mobile/banner1.png";
 ---
+
+<div>
+  <Image src={bannerDesk} alt={"banner"} class="bannerHero" />
+  <Image src={bannerMobile} alt={"banner"} class="bannerHeroMobile" />
+</div>
+
+<style>
+  .bannerHero {
+    width: 100%;
+    height: 550px;
+    display: none;
+  }
+
+  .bannerMobile {
+    display: block;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .bannerHero {
+      width: 100%;
+      height: 550px;
+      display: block;
+    }
+    .bannerHeroMobile {
+      display: none;
+    }
+  }
+</style>
