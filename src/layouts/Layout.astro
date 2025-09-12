@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
+import MenuNav from "../components/MenuNav.astro";
 ---
 
 <!doctype html>
@@ -9,12 +10,12 @@ import NavBar from "../components/NavBar.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon2.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>Bee Labs</title>
   </head>
   <body>
-    <NavBar />
+    <MenuNav />
     <slot />
     <Footer />
   </body>
