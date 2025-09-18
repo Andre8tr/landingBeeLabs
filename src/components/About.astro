@@ -4,20 +4,19 @@ import masLechesImg from "@/assets/img/projectsClients/masleches.png";
 import lolasImg from "@/assets/img/projectsClients/lolas.png";
 import puppyImg from "@/assets/img/projectsClients/puppy.jpeg";
 import ButtonRedFold from "../components/UI/ClickMe.astro";
-import AboutImg from '../assets/img/about/aboutImg2.png'
+import AboutImg from "../assets/img/about/aboutImg2.png";
 import Image from "astro/components/Image.astro";
 ---
-
 
 <div
   class="flex flex-col md:flex-row items-center justify-center gap-6 mx-12 my-12 md:mx-24 lg:mx-28 xl:mx-32"
 >
   <!-- Sección de texto -->
-  <div class="flex-1 text-center md:text-left">
+  <div class="flex-1 text-center justify-center md:text-left">
     <!-- <h2 class="text-2xl font-bold mb-4">Acerca de nosotros</h2> -->
-     <h2 class="text-3xl font-bold mb-4 mt-6 text-left text-gray-800" id="about">
-  ¿Quienes somos?
-</h2>
+    <h2 class="text-3xl font-bold mb-4 mt-6 text-left text-gray-800" id="about">
+      ¿Quienes somos?
+    </h2>
     <p class="text-gray-700 text-justify mb-8">
       Bee Labs es una agencia digital creativa especializada en el desarrollo de
       aplicaciones, páginas web y tiendas en línea (e-commerce). <br />
@@ -27,27 +26,26 @@ import Image from "astro/components/Image.astro";
       rápidos y seguros, ayudando a nuestros clientes a destacar en el mundo digital
       y alcanzar sus objetivos comerciales.
     </p>
-      <a
+    <a
       href="https://wa.me/50246008864"
-      class="whatsapp-button"
       target="_blank"
       rel="noopener noreferrer"
-      >    
-        <ButtonRedFold text="Conversemos sobre tu proyecto" />
-      </a>
+    >
+      <ButtonRedFold text="Conversemos sobre tu proyecto" />
+    </a>
   </div>
 
   <!-- Sección de imagen -->
   <div class="flex mx-auto">
     {
-      
- <Image
-      src={AboutImg}
-      alt={"Soluciones web"}
-      height={400}
-      class="roundSoluciones"
-    />
-    
+      (
+        <Image
+          src={AboutImg}
+          alt={"Soluciones web"}
+          height={400}
+          class="roundSoluciones"
+        />
+      )
     }
   </div>
 </div>
