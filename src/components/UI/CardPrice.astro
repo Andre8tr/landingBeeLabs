@@ -5,8 +5,9 @@ interface Props {
   price?: string;
   description?: string;
   urlImg?: any;
+  alt: string
 }
-const { service, price, description , urlImg} = Astro.props;
+const { service, price, description , urlImg, alt} = Astro.props;
 import storeCommerce from "@/assets/img/social.png";
 ---
 <div class="card">
@@ -17,7 +18,7 @@ import storeCommerce from "@/assets/img/social.png";
     <div style="--bg-color: #a78bfa" class="card__image">
     <Image
       src={urlImg}
-      alt='test'
+      alt={alt}
       class="h-50 w-full object-cover rounded-t-lg md:h-40"
     />
     </div>

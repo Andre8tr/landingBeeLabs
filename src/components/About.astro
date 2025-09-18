@@ -3,19 +3,22 @@ import CardProject from "./CardProject.astro";
 import masLechesImg from "@/assets/img/projectsClients/masleches.png";
 import lolasImg from "@/assets/img/projectsClients/lolas.png";
 import puppyImg from "@/assets/img/projectsClients/puppy.jpeg";
-import storeCommerce from "@/assets/img/ecommerce.png";
+import ButtonRedFold from "../components/UI/ClickMe.astro";
+import AboutImg from '../assets/img/about/aboutImg.png'
+import Image from "astro/components/Image.astro";
 ---
 
-<h2 class="text-3xl font-bold mb-4 mt-6 text-center" id="about">
-  ¿Quienes somos?
-</h2>
+
 <div
   class="flex flex-col md:flex-row items-center justify-center gap-6 mx-12 my-12 md:mx-24 lg:mx-28 xl:mx-32"
 >
   <!-- Sección de texto -->
   <div class="flex-1 text-center md:text-left">
     <!-- <h2 class="text-2xl font-bold mb-4">Acerca de nosotros</h2> -->
-    <p class="text-gray-700 text-justify">
+     <h2 class="text-3xl font-bold mb-4 mt-6 text-left text-gray-800" id="about">
+  ¿Quienes somos?
+</h2>
+    <p class="text-gray-700 text-justify mb-8">
       Bee Labs es una agencia digital creativa especializada en el desarrollo de
       aplicaciones, páginas web y tiendas en línea (e-commerce). <br />
       Combinamos diseño atractivo, tecnología de vanguardia y estrategias personalizadas
@@ -24,22 +27,33 @@ import storeCommerce from "@/assets/img/ecommerce.png";
       rápidos y seguros, ayudando a nuestros clientes a destacar en el mundo digital
       y alcanzar sus objetivos comerciales.
     </p>
+      <a
+      href="https://wa.me/50246008864"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener noreferrer"
+      >    
+        <ButtonRedFold text="Conversemos sobre tu proyecto" />
+      </a>
   </div>
 
   <!-- Sección de imagen -->
   <div class="flex-1">
     {
-      /* 
+      
  <Image
-      src={InfoImage}
+      src={AboutImg}
       alt={"Soluciones web"}
-      height={300}
+      height={400}
       class="roundSoluciones"
     />
-    */
+    
     }
   </div>
 </div>
+<h2 class="text-3xl font-bold text-center text-gray-800 mt-4" id="services">
+  Nuestros proyectos
+</h2>
 
 <div
   class="flex flex-col md:flex-row items-center justify-center mx-12 gap-6 my-18 mt-6 md:mx-24"
