@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+:root {
+  --purpleBee: #7c3aed;
+  --purpleBeeDark: #6e2cdf;
+}
+
 html {
   scroll-behavior: smooth;
 }
