@@ -6,8 +6,10 @@ import PriceCard from "../../components/UI/PriceCard.astro";
 ---
 
 <ServicesLayout titlePage="Tu negocio en línea 24/7">
-  <div class="flex justify-around mx-12 items-center gap-10">
-    <div class="w-1/2">
+  <div
+    class="flex flex-col-reverse md:flex-row justify-around mx-5 gap-6 md:mx-20 items-center md:gap-10"
+  >
+    <div class="w-full md:w-1/2">
       <h2 class="text-3xl font-bold mb-4">Tu tienda en línea 24/7</h2>
       <p class="text-left leading-relaxed">
         Un <strong>E-commerce</strong> es una tienda digital que te permite vender
@@ -24,23 +26,41 @@ import PriceCard from "../../components/UI/PriceCard.astro";
         </li>
         <li>Gestión de inventario y pedidos en tiempo real.</li>
         <li>Automatización de facturación y cálculo de envíos.</li>
+        <li>
+          Integración con múltiples canales de venta como Facebook, Instagram y
+          WhatsApp.
+        </li>
+        <li>
+          Notificaciones automáticas para clientes sobre compras, envíos y
+          promociones.
+        </li>
       </ul>
       <h3 class="mt-4 font-semibold">Ventajas:</h3>
       <ul class="list-disc list-inside space-y-2 text-left mb-6">
         <li>Ventas 24/7 sin límites geográficos.</li>
         <li>Alcance global a clientes de cualquier parte del mundo.</li>
-        <li>Menores costos que una tienda física.</li>
-        <li>Automatización de ventas y logística.</li>
+        <li>Menores costos que una tienda física tradicional.</li>
+        <li>Automatización de ventas, inventario y logística.</li>
         <li>Proyección de una imagen profesional y competitiva.</li>
+        <li>
+          Mejora en la fidelización gracias a cupones, ofertas y membresías.
+        </li>
+        <li>
+          Escalabilidad: empieza con pocos productos y amplía tu catálogo sin
+          límites.
+        </li>
+        <li>Mayor control de tu negocio gracias a métricas en tiempo real.</li>
       </ul>
 
-      <div class="flex justify-start align-middle">
+      <div
+        class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-4"
+      >
         <PriceCard
           title="Basic"
           price="10,000"
-          item1="Productos ilimitados"
-          item2="Categorias y filtros"
-          item3="Alertas de stock"
+          item1="Catálogo hasta 50 productos"
+          item2="Diseño responsivo"
+          item3="Carrito de compras básico"
           item4="Dominio web incluido"
         />
 
@@ -48,18 +68,28 @@ import PriceCard from "../../components/UI/PriceCard.astro";
           title="Premium"
           price="13,000"
           item1="Productos ilimitados"
-          item2="Categorias y filtros"
-          item3="Alertas de stock"
-          item4="Dominio web incluido"
+          item2="Categorías avanzadas y filtros"
+          item3="Integración con pasarela de pago"
+          item4="Gestión de inventario en tiempo real"
+        />
+
+        <PriceCard
+          title="Ultra"
+          price="18,000"
+          item1="Funciones Premium incluidas"
+          item2="Integración con redes sociales y marketplace"
+          item3="Automatización de envíos y facturación"
+          item4="Reportes avanzados y analítica"
         />
       </div>
     </div>
-    <div class="w-1/2">
+
+    <div class="w-full md:w-1/2 mb-6 md:mb-0">
       <Image
         src={ecommerceImg}
         alt="E-commerce"
         width={1000}
-        class="rounded-3xl shadow-lg"
+        class="rounded-3xl shadow-lg mx-auto"
       />
     </div>
   </div>
