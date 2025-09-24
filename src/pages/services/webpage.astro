@@ -1,0 +1,62 @@
+---
+import ServicesLayout from "../../layouts/ServicesLayout.astro";
+import Image from "astro/components/Image.astro";
+import ecommerceImg from "../../assets/img/services/ecommerce.png";
+import PriceCard from "../../components/UI/PriceCard.astro";
+---
+
+<ServicesLayout titlePage="Tu presencia digital">
+  <div class="flex justify-around mx-20 items-center gap-10">
+    <div class="w-1/2">
+      <h2 class="text-3xl font-bold mb-4">Tu sitio web profesional</h2>
+      <p class="text-left leading-relaxed">
+        Un <strong>sitio web</strong> es la carta de presentación digital de tu negocio.
+        Es un espacio donde tus clientes pueden conocerte, descubrir tus servicios
+        y ponerse en contacto contigo de forma directa y sencilla.
+      </p>
+      <h3 class="mt-4 font-semibold">¿Cómo funciona?</h3>
+      <ul class="list-disc list-inside space-y-2 text-left">
+        <li>Dominio y hosting con una dirección única en internet.</li>
+        <li>Secciones informativas como Inicio, Servicios y Contacto.</li>
+        <li>Diseño responsivo para adaptarse a móvil, tablet y PC.</li>
+        <li>Optimización SEO para destacar en buscadores como Google.</li>
+      </ul>
+      <h3 class="mt-4 font-semibold">Ventajas:</h3>
+      <ul class="list-disc list-inside space-y-2 text-left mb-6">
+        <li>Aumenta la credibilidad y confianza de tu negocio.</li>
+        <li>Canal directo de comunicación con clientes potenciales.</li>
+        <li>Disponibilidad 24/7 para mostrar tu marca al mundo.</li>
+        <li>Mejora la captación de clientes mediante SEO y formularios.</li>
+      </ul>
+
+      <div class="flex justify-start align-middle">
+        <PriceCard
+          title="Basic"
+          price="10,000"
+          item1="Productos ilimitados"
+          item2="Categorias y filtros"
+          item3="Alertas de stock"
+          item4="Dominio web incluido"
+        />
+
+        <PriceCard
+          title="Premium"
+          price="13,000"
+          item1="Productos ilimitados"
+          item2="Categorias y filtros"
+          item3="Alertas de stock"
+          item4="Dominio web incluido"
+        />
+      </div>
+    </div>
+
+    <div class="w-1/2">
+      <Image
+        src={ecommerceImg}
+        alt="Sitio Web"
+        width={1000}
+        class="rounded-3xl shadow-lg"
+      />
+    </div>
+  </div>
+</ServicesLayout>

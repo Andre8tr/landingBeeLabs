@@ -1,0 +1,63 @@
+---
+import ServicesLayout from "../../layouts/ServicesLayout.astro";
+import Image from "astro/components/Image.astro";
+import ecommerceImg from "../../assets/img/services/ecommerce.png";
+import PriceCard from "../../components/UI/PriceCard.astro";
+---
+
+<ServicesLayout titlePage="Haz crecer tu marca en redes sociales">
+  <div class="flex justify-around mx-20 items-center gap-10">
+    <div class="w-1/2">
+      <h2 class="text-3xl font-bold mb-4">Gestión de Redes Sociales</h2>
+      <p class="text-left leading-relaxed">
+        La <strong>gestión de redes sociales</strong> consiste en crear, planificar
+        y administrar contenido en plataformas como Facebook, Instagram, TikTok y
+        LinkedIn para aumentar la visibilidad de tu marca y construir una comunidad
+        leal.
+      </p>
+      <h3 class="mt-4 font-semibold">¿Cómo funciona?</h3>
+      <ul class="list-disc list-inside space-y-2 text-left">
+        <li>Creación de un calendario de publicaciones mensual.</li>
+        <li>Diseño de contenido atractivo (imágenes, reels, videos).</li>
+        <li>Publicidad digital segmentada para llegar al público correcto.</li>
+        <li>Gestión de comunidad: responder mensajes y comentarios.</li>
+        <li>Reportes de rendimiento con métricas claras.</li>
+      </ul>
+      <h3 class="mt-4 font-semibold">Ventajas:</h3>
+      <ul class="list-disc list-inside space-y-2 text-left mb-6">
+        <li>Mayor alcance y visibilidad de tu negocio.</li>
+        <li>Generación de clientes potenciales mediante contenido de valor.</li>
+        <li>Construcción de una comunidad fiel alrededor de tu marca.</li>
+        <li>Mejora de la reputación y posicionamiento digital.</li>
+      </ul>
+
+      <div class="flex justify-start align-middle">
+        <PriceCard
+          title="Basic"
+          price="10,000"
+          item1="Productos ilimitados"
+          item2="Categorias y filtros"
+          item3="Alertas de stock"
+          item4="Dominio web incluido"
+        />
+
+        <PriceCard
+          title="Premium"
+          price="13,000"
+          item1="Productos ilimitados"
+          item2="Categorias y filtros"
+          item3="Alertas de stock"
+          item4="Dominio web incluido"
+        />
+      </div>
+    </div>
+    <div class="w-1/2">
+      <Image
+        src={ecommerceImg}
+        alt="Redes Sociales"
+        width={1000}
+        class="rounded-3xl shadow-lg"
+      />
+    </div>
+  </div>
+</ServicesLayout>

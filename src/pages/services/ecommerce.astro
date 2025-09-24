@@ -1,0 +1,66 @@
+---
+import ServicesLayout from "../../layouts/ServicesLayout.astro";
+import Image from "astro/components/Image.astro";
+import ecommerceImg from "../../assets/img/services/ecommerce.png";
+import PriceCard from "../../components/UI/PriceCard.astro";
+---
+
+<ServicesLayout titlePage="Tu negocio en línea 24/7">
+  <div class="flex justify-around mx-12 items-center gap-10">
+    <div class="w-1/2">
+      <h2 class="text-3xl font-bold mb-4">Tu tienda en línea 24/7</h2>
+      <p class="text-left leading-relaxed">
+        Un <strong>E-commerce</strong> es una tienda digital que te permite vender
+        productos o servicios en internet de manera automatizada. Funciona como un
+        escaparate disponible todo el tiempo, donde los clientes pueden explorar
+        tu catálogo, comprar y pagar de forma segura.
+      </p>
+      <h3 class="mt-4 font-semibold">¿Cómo funciona?</h3>
+      <ul class="list-disc list-inside space-y-2 text-left">
+        <li>Catálogo de productos con fotos, descripciones y precios.</li>
+        <li>Carrito de compras para que el cliente seleccione lo que desea.</li>
+        <li>
+          Pasarela de pago segura (tarjeta, transferencias, PayPal, etc.).
+        </li>
+        <li>Gestión de inventario y pedidos en tiempo real.</li>
+        <li>Automatización de facturación y cálculo de envíos.</li>
+      </ul>
+      <h3 class="mt-4 font-semibold">Ventajas:</h3>
+      <ul class="list-disc list-inside space-y-2 text-left mb-6">
+        <li>Ventas 24/7 sin límites geográficos.</li>
+        <li>Alcance global a clientes de cualquier parte del mundo.</li>
+        <li>Menores costos que una tienda física.</li>
+        <li>Automatización de ventas y logística.</li>
+        <li>Proyección de una imagen profesional y competitiva.</li>
+      </ul>
+
+      <div class="flex justify-start align-middle">
+        <PriceCard
+          title="Basic"
+          price="10,000"
+          item1="Productos ilimitados"
+          item2="Categorias y filtros"
+          item3="Alertas de stock"
+          item4="Dominio web incluido"
+        />
+
+        <PriceCard
+          title="Premium"
+          price="13,000"
+          item1="Productos ilimitados"
+          item2="Categorias y filtros"
+          item3="Alertas de stock"
+          item4="Dominio web incluido"
+        />
+      </div>
+    </div>
+    <div class="w-1/2">
+      <Image
+        src={ecommerceImg}
+        alt="E-commerce"
+        width={1000}
+        class="rounded-3xl shadow-lg"
+      />
+    </div>
+  </div>
+</ServicesLayout>

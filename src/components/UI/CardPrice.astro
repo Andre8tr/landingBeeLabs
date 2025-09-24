@@ -6,8 +6,9 @@ interface Props {
   description?: string;
   urlImg?: any;
   alt: string
+  urlPage: string
 }
-const { service, price, description , urlImg, alt} = Astro.props;
+const { service, price, description , urlImg, alt, urlPage} = Astro.props;
 import storeCommerce from "@/assets/img/social.png";
 ---
 <div class="card">
@@ -15,20 +16,23 @@ import storeCommerce from "@/assets/img/social.png";
   <div class="card__glow"></div>
   <div class="card__content">
     <div class="card__badge">Info</div>
-    <div style="--bg-color: #a78bfa" class="card__image">
-    <Image
-      src={urlImg}
-      alt={alt}
-      class="h-50 w-full object-cover rounded-t-lg md:h-40"
-    />
+    <a href={`/${urlPage}`} style="--bg-color: #a78bfa" class="card__image">
+        <div style="--bg-color: #a78bfa" class="card__image">
+      <Image
+          src={urlImg}
+          alt={alt}
+          class="h-50 w-full object-cover rounded-t-lg md:h-40"
+        />
     </div>
-    <div class="card__text">
+    </a>
+  
+    <a href={`/${urlPage}`}>
+      <div class="card__text">
       <p class="card__title">{service}</p>
       <p class="card__description">{description}</p>
-    </div>
+    </div>  
     <div class="card__footer">
       <div class="card__price">Desde Q{price}</div>
-      <a href="/services">
         <div class="card__button">
           <svg height="16" width="16" viewBox="0 0 24 24">
             <path
@@ -42,6 +46,7 @@ import storeCommerce from "@/assets/img/social.png";
     </div>
   </div>
 </div>
+
 
 <style>
   /* From Uiverse.io by SachinKumar666 */
