@@ -1,83 +1,79 @@
 ---
 import ServicesLayout from "../../layouts/ServicesLayout.astro";
 import Image from "astro/components/Image.astro";
-import ecommerceImg from "../../assets/img/services/ecommerce.png";
+import webpageImg from "../../assets/img/services/web.png";
 import PriceCard from "../../components/UI/PriceCard.astro";
 ---
 
 <ServicesLayout titlePage="Tu presencia digital">
   <div
-    class="flex
-flex-col-reverse md:flex-row justify-around mx-5 gap-6 md:mx-20 items-center
-md:gap-10"
+    class="flex flex-col md:flex-row justify-between mx-5 md:mx-20 gap-10 md:gap-16"
   >
-    <div class="w-full md:w-1/2">
-      <h2 class="text-3xl font-bold mb-4">Tu sitio web profesional</h2>
-      <p class="text-left leading-relaxed">
-        Un
-        <strong>sitio web</strong> es la carta de presentación digital de tu negocio.
-        Es un espacio donde tus clientes pueden conocerte, descubrir tus servicios
-        y ponerse en contacto contigo de forma directa y sencilla.
-      </p>
-      <h3 class="mt-4
-font-semibold">¿Cómo funciona?</h3>
-      <ul class="list-disc list-inside space-y-2
-text-left">
-        <li>Dominio y hosting con una dirección única en internet.</li>
-        <li>Secciones informativas como Inicio, Servicios y Contacto.</li>
-        <li>Diseño responsivo para adaptarse a móvil, tablet y PC.</li>
-        <li>Optimización SEO para destacar en buscadores como Google.</li>
-      </ul>
-      <h3 class="mt-4 font-semibold">Ventajas:</h3>
-      <ul class="list-disc list-inside space-y-2 text-left mb-6">
-        <li>Aumenta la credibilidad y confianza de tu negocio.</li>
-        <li>Canal directo de comunicación con clientes potenciales.</li>
-        <li>Disponibilidad 24/7 para mostrar tu marca al mundo.</li>
-        <li>Mejora la captación de clientes mediante SEO y formularios.</li>
-        <li>
-          Permite integrar herramientas de análisis para conocer mejor a tus
-          clientes.
-        </li>
-        <li>
-          Posibilidad de añadir blog o sección de noticias para atraer tráfico
-          orgánico.
-        </li>
-        <li>
-          Refuerza la identidad visual de tu marca con un diseño profesional.
-        </li>
-        <li>
-          Escalabilidad: puedes comenzar sencillo y agregar más secciones con el
-          tiempo.
-        </li>
-      </ul>
-      <div
-        class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-4"
-      >
-        <PriceCard
-          title="Basic"
-          price="10,000"
-          item1="Productos ilimitados"
-          item2="Categorias y filtros"
-          item3="Alertas de stock"
-          item4="Dominio web incluido"
-        />
-        <PriceCard
-          title="Premium"
-          price="13,000"
-          item1="Productos ilimitados"
-          item2="Categorias y filtros"
-          item3="Alertas de stock"
-          item4="Dominio web incluido"
+    <!-- Imagen sticky a la derecha con margen superior -->
+    <div class="w-full md:w-1/2 md:order-2">
+      <div class="md:sticky md:top-28">
+        <!-- Ajusta top-28 según altura navbar -->
+        <Image
+          src={webpageImg}
+          alt="Sitio Web"
+          width={1000}
+          class="rounded-3xl shadow-lg mx-auto"
         />
       </div>
     </div>
-    <div class="w-full md:w-1/2 mb-6 md:mb-0">
-      <Image
-        src={ecommerceImg}
-        alt="Sitio Web"
-        width={1000}
-        class="rounded-3xl shadow-lg mx-auto"
-      />
+
+    <!-- Texto a la izquierda -->
+    <div class="w-full md:w-1/2 md:order-1">
+      <h2 class="text-3xl font-bold mb-4">Tu sitio web profesional 🌍</h2>
+      <p class="text-left leading-relaxed mb-4">
+        Un <strong>sitio web</strong> es la carta de presentación digital de tu negocio.
+        Aquí puedes transmitir la esencia de tu marca, mostrar lo que haces y brindar
+        confianza a tus clientes potenciales. Tener un sitio web es como tener una
+        oficina abierta 24/7 sin importar el lugar ni el horario.
+      </p>
+
+      <h3 class="mt-6 font-semibold">¿Cómo funciona? ⚙️</h3>
+      <ul class="list-disc list-inside space-y-2 text-left mb-6">
+        <li>Dominio y hosting con una dirección única en internet.</li>
+        <li>Secciones como Inicio, Servicios y Contacto.</li>
+        <li>Diseño responsivo para móvil, tablet y PC.</li>
+        <li>Optimización SEO para buscadores como Google.</li>
+        <li>Integración con redes sociales y formularios.</li>
+      </ul>
+
+      <h3 class="mt-6 font-semibold">Ventajas 🌟</h3>
+      <ul class="list-disc list-inside space-y-2 text-left mb-6">
+        <li>Aumenta la credibilidad y confianza de tu negocio.</li>
+        <li>Canal directo de comunicación con clientes potenciales.</li>
+        <li>Disponibilidad 24/7 para mostrar tu marca.</li>
+        <li>Mejora la captación de clientes mediante SEO y formularios.</li>
+        <li>Permite integrar herramientas de análisis.</li>
+        <li>Posibilidad de añadir blog o noticias.</li>
+        <li>Refuerza la identidad visual de tu marca.</li>
+        <li>Escalabilidad: empieza sencillo y crece junto a tu negocio.</li>
+      </ul>
     </div>
+  </div>
+
+  <!-- Sección aparte para las Price Cards -->
+  <div
+    class="mt-16 md:mt-28 flex flex-col md:flex-row justify-center items-center gap-6"
+  >
+    <PriceCard
+      title="Basic"
+      price="10,000"
+      item1="Sitio institucional básico"
+      item2="Diseño responsivo"
+      item3="Optimización SEO inicial"
+      item4="Dominio web incluido"
+    />
+    <PriceCard
+      title="Premium"
+      price="13,000"
+      item1="Diseño personalizado"
+      item2="Integración con redes sociales"
+      item3="Formularios de contacto avanzados"
+      item4="Reportes básicos de tráfico"
+    />
   </div>
 </ServicesLayout>

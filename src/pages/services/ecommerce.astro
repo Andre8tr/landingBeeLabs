@@ -7,20 +7,40 @@ import PriceCard from "../../components/UI/PriceCard.astro";
 
 <ServicesLayout titlePage="Tu negocio en línea 24/7">
   <div
-    class="flex flex-col-reverse md:flex-row justify-around mx-5 gap-6 md:mx-20 items-center md:gap-10"
+    class="flex flex-col md:flex-row justify-between mx-5 md:mx-20 gap-10 md:gap-16"
   >
-    <div class="w-full md:w-1/2">
-      <h2 class="text-3xl font-bold mb-4">Tu tienda en línea 24/7</h2>
-      <p class="text-left leading-relaxed">
+    <!-- Imagen sticky a la derecha con margen superior -->
+    <div class="w-full md:w-1/2 md:order-2">
+      <div class="md:sticky md:top-28">
+        <!-- Ajusta top-28 según altura navbar -->
+        <Image
+          src={ecommerceImg}
+          alt="E-commerce"
+          width={1000}
+          class="rounded-3xl shadow-lg mx-auto"
+        />
+      </div>
+    </div>
+
+    <!-- Texto a la izquierda -->
+    <div class="w-full md:w-1/2 md:order-1">
+      <h2 class="text-3xl font-bold mb-4">Tu tienda en línea 24/7 🛒</h2>
+      <p class="text-left leading-relaxed mb-4">
         Un <strong>E-commerce</strong> es una tienda digital que te permite vender
         productos o servicios en internet de manera automatizada. Funciona como un
         escaparate disponible todo el tiempo, donde los clientes pueden explorar
-        tu catálogo, comprar y pagar de forma segura.
+        tu catálogo, comprar y pagar de forma segura sin importar la hora o el lugar.
       </p>
-      <h3 class="mt-4 font-semibold">¿Cómo funciona?</h3>
-      <ul class="list-disc list-inside space-y-2 text-left">
-        <li>Catálogo de productos con fotos, descripciones y precios.</li>
-        <li>Carrito de compras para que el cliente seleccione lo que desea.</li>
+
+      <h3 class="mt-6 font-semibold">¿Cómo funciona? ⚙️</h3>
+      <ul class="list-disc list-inside space-y-2 text-left mb-6">
+        <li>
+          Catálogo de productos con fotos, descripciones y precios claros.
+        </li>
+        <li>
+          Carrito de compras intuitivo para que el cliente seleccione lo que
+          desea.
+        </li>
         <li>
           Pasarela de pago segura (tarjeta, transferencias, PayPal, etc.).
         </li>
@@ -35,7 +55,8 @@ import PriceCard from "../../components/UI/PriceCard.astro";
           promociones.
         </li>
       </ul>
-      <h3 class="mt-4 font-semibold">Ventajas:</h3>
+
+      <h3 class="mt-6 font-semibold">Ventajas 🌟</h3>
       <ul class="list-disc list-inside space-y-2 text-left mb-6">
         <li>Ventas 24/7 sin límites geográficos.</li>
         <li>Alcance global a clientes de cualquier parte del mundo.</li>
@@ -51,46 +72,38 @@ import PriceCard from "../../components/UI/PriceCard.astro";
         </li>
         <li>Mayor control de tu negocio gracias a métricas en tiempo real.</li>
       </ul>
-
-      <div
-        class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-4"
-      >
-        <PriceCard
-          title="Basic"
-          price="10,000"
-          item1="Catálogo hasta 50 productos"
-          item2="Diseño responsivo"
-          item3="Carrito de compras básico"
-          item4="Dominio web incluido"
-        />
-
-        <PriceCard
-          title="Premium"
-          price="13,000"
-          item1="Productos ilimitados"
-          item2="Categorías avanzadas y filtros"
-          item3="Integración con pasarela de pago"
-          item4="Gestión de inventario en tiempo real"
-        />
-
-        <PriceCard
-          title="Ultra"
-          price="18,000"
-          item1="Funciones Premium incluidas"
-          item2="Integración con redes sociales y marketplace"
-          item3="Automatización de envíos y facturación"
-          item4="Reportes avanzados y analítica"
-        />
-      </div>
     </div>
+  </div>
 
-    <div class="w-full md:w-1/2 mb-6 md:mb-0">
-      <Image
-        src={ecommerceImg}
-        alt="E-commerce"
-        width={1000}
-        class="rounded-3xl shadow-lg mx-auto"
-      />
-    </div>
+  <!-- Sección aparte para las Price Cards -->
+  <div
+    class="mt-16 md:mt-28 flex flex-col md:flex-row justify-center items-center gap-6"
+  >
+    <PriceCard
+      title="Basic"
+      price="10,000"
+      item1="Catálogo hasta 50 productos"
+      item2="Diseño responsivo"
+      item3="Carrito de compras básico"
+      item4="Dominio web incluido"
+    />
+
+    <PriceCard
+      title="Premium"
+      price="13,000"
+      item1="Productos ilimitados"
+      item2="Categorías avanzadas y filtros"
+      item3="Integración con pasarela de pago"
+      item4="Gestión de inventario en tiempo real"
+    />
+
+    <PriceCard
+      title="Ultra"
+      price="18,000"
+      item1="Funciones Premium incluidas"
+      item2="Integración con redes sociales y marketplace"
+      item3="Automatización de envíos y facturación"
+      item4="Reportes avanzados y analítica"
+    />
   </div>
 </ServicesLayout>
