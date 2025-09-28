@@ -1,12 +1,11 @@
 ---
-title: "Mi primera publicación en el blog"
-pubDate: 2022-07-01
-description: "Este es la primera publicación de mi nuevo blog Astro."
-author: "Alumno de Astro"
-image:
-  url: "https://docs.astro.build/assets/full-logo-light.png"
-  alt: "El logotipo completo de Astro."
-tags: ["astro", "bloguear", "aprender en público"]
+title: "Mi primer post"
+description: "Este es un post de prueba para Bee Labs."
+date: 2025-09-26
+author: "Bee Labs"
+tags: ["ejemplo", "astro"]
+image: "/images/mi-imagen.jpg" # <- opcional
+
 ---
 
 # Mi primera publicación en el blog

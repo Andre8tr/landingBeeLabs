@@ -1,13 +1,67 @@
 ---
-import Layout from "../layouts/Layout.astro";
+// src/pages/blog.astro
+import BlogLayout from "../layouts/BlogLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+
+// Ordenamos los posts por fecha descendente
+posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<Layout>
-  <h1>Mi blog de aprendizaje sobre Astro</h1>
-  <p>
-    Aquí es donde publicaré acerca de mi viaje aprendiendo Astro./p>
-    <ul>
-      <li><a href="/posts/post-1/">Publicación 1</a></li>
-    </ul>
-  </p>
-</Layout>
+<BlogLayout titlePage="Nuestro Blog 🐝">
+  <div class="max-w-5xl mx-auto px-6 py-12">
+    <p class="text-lg text-gray-600 mb-10 text-center">
+      Aquí compartimos noticias, artículos y consejos sobre diseño web,
+      marketing digital y tecnología 🚀
+    </p>
+
+    <!-- Grid de posts -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        posts.map((post) => (
+          <a
+            href={`/blog/${post.slug}`}
+            class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col"
+            aria-label={`Leer el artículo ${post.data.title}`}
+          >
+            {/* Imagen opcional */}
+
+            {/*post.data.image && (
+              <img
+                src={post.data.image}
+                alt={post.data.title}
+                class="w-full h-40 object-cover rounded-t-xl mb-4"
+              />
+            )*/}
+
+            {/* Título */}
+            <h2 class="text-2xl font-bold mb-3 text-gray-800">
+              {post.data.title}
+            </h2>
+
+            {/* Fecha */}
+            <p class="text-sm text-gray-500 mb-2">
+              📅{" "}
+              {post.data.date.toLocaleDateString("es-ES", {
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
+
+            {/* Descripción */}
+            <p class="text-gray-600 flex-grow">
+              {post.data.description ?? "No hay descripción disponible."}
+            </p>
+
+            {/* Leer más */}
+            <span class="mt-4 text-primary-600 font-semibold hover:underline">
+              Leer más →
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BlogLayout>

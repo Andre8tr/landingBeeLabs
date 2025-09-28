@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+// ✅ Esta función genera todas las rutas posibles para los posts
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+// ✅ El `props` viene desde arriba
+const { post } = Astro.props;
+
+// Renderiza el contenido del markdown
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <article class="prose lg:prose-xl mx-auto py-10">
+    <h1>{post.data.title}</h1>
+    <p class="text-gray-500 text-sm">{post.data.date.toDateString()}</p>
+
+    <Content />
+  </article>
+</Layout>
