@@ -1,13 +1,11 @@
 ---
-title: "Mi primer post"
-description: "Este es un post de prueba para Bee Labs."
-date: 2025-09-26
-author: "Bee Labs"
-tags: ["ejemplo", "astro"]
-image: "/images/mi-imagen.jpg" # <- opcional
-
+title: "Título del Post"
+date: 2025-09-28
+author: "Andre"
+tags: ["astro", "diseño", "web"]
+image: "/blog/aicode.jpg"
+description: "Breve descripción."
 ---
-
 # Mi primera publicación en el blog
 
 Publicado el: 2022-07-01
