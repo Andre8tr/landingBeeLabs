@@ -1,15 +1,14 @@
 ---
+// layouts/PostLayout.astro
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
-import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title?: string;
   date?: Date;
   author?: string;
   tags?: string[];
-  image?: string;
 }
 
 const {
@@ -17,7 +16,6 @@ const {
   date = new Date(),
   author,
   tags = [],
-  image,
 } = Astro.props;
 ---
 
@@ -33,32 +31,13 @@ const {
   <body class="bg-gray-50 text-gray-900 antialiased">
     <NavBar />
 
-    <!-- Hero con imagen solo si existe -->
-    {
-      image ? (
-        <section class="relative h-64 md:h-80 w-full overflow-hidden">
-          <img
-            src={image}
-            alt={title}
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-end">
-            <div class="max-w-4xl mx-auto px-6 pb-10">
-              <h1 class="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-                {title}
-              </h1>
-            </div>
-          </div>
-        </section>
-      ) : (
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center text-gray-800 mt-12">
-          {title}
-        </h1>
-      )
-    }
-
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1
+        class="text-4xl md:text-5xl font-bold mb-6 text-center text-gray-800 mt-12"
+      >
+        {title}
+      </h1>
+
       <!-- Meta info -->
       <div
         class="flex flex-col md:flex-row md:items-center md:justify-between mb-8 text-gray-600 text-sm"
@@ -94,8 +73,7 @@ const {
       <article
         class="prose prose-lg prose-gray max-w-none
                prose-headings:font-bold prose-a:text-blue-600
-               prose-a:no-underline hover:prose-a:underline
-               prose-img:rounded-xl"
+               prose-a:no-underline hover:prose-a:underline"
       >
         <slot />
       </article>

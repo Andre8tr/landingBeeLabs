@@ -1,9 +1,8 @@
 ---
-//layouts/BlogLayout.astro
+// layouts/BlogLayout.astro
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
-import { ClientRouter } from "astro:transitions";
 
 interface Props {
   titlePage: string;
@@ -25,7 +24,7 @@ const { titlePage } = Astro.props;
     <NavBar />
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 class="text-4xl font-bold text-center text-gray-800">
+      <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">
         {titlePage}
       </h1>
       <div class="prose prose-lg prose-gray mx-auto">
@@ -34,5 +33,5 @@ const { titlePage } = Astro.props;
     </main>
 
     <Footer />
-  </body><script src="https://unpkg.com/alpinejs" defer></script>
+  </body>
 </html>
