@@ -3,7 +3,7 @@ title: "Título del Post"
 date: 2025-09-28
 author: "Andre"
 tags: ["astro", "diseño", "web"]
-image: "/blog/aicode.jpg"
+#image: "/blog/aicode.jpg"
 description: "Breve descripción."
 ---
 # Mi primera publicación en el blog
